@@ -1,0 +1,237 @@
+/* Mobile-first responsive design CSS */
+
+/* Base responsive utilities */
+.mobile-responsive {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Mobile-specific styles */
+@media (max-width: 767px) {
+  .mobile-responsive.mobile {
+    padding: 1rem;
+  }
+
+  /* Touch targets */
+  .touch-button {
+    min-height: 44px;
+    min-width: 44px;
+    padding: 12px 16px;
+  }
+
+  /* Mobile typography */
+  .mobile h1 { font-size: 2rem; }
+  .mobile h2 { font-size: 1.5rem; }
+  .mobile h3 { font-size: 1.25rem; }
+  .mobile h4 { font-size: 1.125rem; }
+
+  /* Mobile cards */
+  .responsive-card {
+    margin-bottom: 1rem;
+  }
+
+  /* Mobile grid adjustments */
+  .responsive-grid {
+    gap: 0.75rem;
+  }
+
+  /* Modal adjustments */
+  .responsive-modal {
+    margin: 0.5rem;
+    max-height: calc(100vh - 2rem);
+  }
+
+  /* Navigation adjustments */
+  .mobile .navbar {
+    padding: 0.5rem 1rem;
+  }
+
+  /* Form adjustments */
+  .mobile input,
+  .mobile textarea,
+  .mobile select {
+    font-size: 16px; /* Prevents zoom on iOS */
+    padding: 12px 16px;
+  }
+
+  /* Chart adjustments */
+  .mobile .chart-container {
+    height: 200px !important;
+  }
+
+  /* Stats grid mobile layout */
+  .mobile .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+
+  /* Dashboard mobile layout */
+  .mobile .dashboard-main {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  /* Sidebar mobile behavior */
+  .mobile .sidebar {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    height: 100vh;
+    width: 80%;
+    z-index: 1000;
+    transition: left 0.3s ease;
+  }
+
+  .mobile .sidebar.open {
+    left: 0;
+  }
+
+  /* Mobile menu overlay */
+  .mobile .menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+  }
+}
+
+/* Tablet styles */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .tablet {
+    padding: 1.5rem;
+  }
+
+  .tablet .responsive-grid {
+    gap: 1rem;
+  }
+
+  .tablet .stats-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .tablet .dashboard-main {
+    grid-template-columns: 2fr 1fr;
+    gap: 1.5rem;
+  }
+}
+
+/* Desktop styles */
+@media (min-width: 1024px) {
+  .desktop {
+    padding: 2rem;
+  }
+
+  .desktop .responsive-grid {
+    gap: 1.5rem;
+  }
+
+  .desktop .stats-grid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .desktop .dashboard-main {
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+  }
+}
+
+/* Orientation-specific styles */
+.landscape.mobile {
+  /* Landscape mobile adjustments */
+  .chart-container {
+    height: 180px !important;
+  }
+  
+  .modal-content {
+    max-height: calc(100vh - 1rem);
+  }
+}
+
+/* Touch device optimizations */
+.mobile-device {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.mobile-device input,
+.mobile-device textarea {
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+}
+
+/* Smooth scrolling for mobile */
+.mobile-device {
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Focus styles for accessibility */
+.mobile-device *:focus {
+  outline: 2px solid #8b5cf6;
+  outline-offset: 2px;
+}
+
+/* Animation optimizations for mobile */
+@media (max-width: 767px) {
+  * {
+    animation-duration: 0.2s !important;
+    transition-duration: 0.2s !important;
+  }
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .responsive-card {
+    border-width: 2px;
+  }
+  
+  .touch-button {
+    border: 2px solid currentColor;
+  }
+}
+
+/* Dark mode specific mobile adjustments */
+@media (max-width: 767px) {
+  .dark .mobile {
+    background-color: #0f0a1a;
+  }
+  
+  .dark .responsive-card {
+    background-color: rgba(88, 28, 135, 0.3);
+    border-color: rgba(139, 92, 246, 0.2);
+  }
+}
+
+/* Print styles */
+@media print {
+  .mobile-responsive {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  
+  .touch-button,
+  .floating-action-button,
+  .mobile-nav-helper {
+    display: none !important;
+  }
+}
