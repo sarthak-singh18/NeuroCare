@@ -1,0 +1,135 @@
+{
+  "profiles": {
+    "coach-1": {
+      "userId": "coach-1",
+      "name": "Coach Jane",
+      "timezone": "America/New_York",
+      "preferences": {
+        "preferredSessionLength": 3,
+        "detoxFormat": "phone-free",
+        "usePersonalization": true
+      },
+      "consent": {
+        "consentGiven": true,
+        "timestamp": "2025-11-01T08:00:00.000Z"
+      },
+      "retentionUntil": null,
+      "lastAnalysis": {
+        "timestamp": "2025-11-01T08:15:00.000Z",
+        "sentimentScore": -1.2,
+        "sentimentLabel": "negative",
+        "burnoutRisk": "medium",
+        "suggestions": [
+          "4-4-4 breathing for 3 minutes",
+          "2-hour phone-free evening routine"
+        ]
+      }
+    },
+    "demo-ally": {
+      "userId": "demo-ally",
+      "name": "Ally",
+      "timezone": "Europe/London",
+      "preferences": {
+        "preferredSessionLength": 5,
+        "detoxFormat": "social-media-lite",
+        "usePersonalization": false
+      },
+      "consent": {
+        "consentGiven": false,
+        "timestamp": "2025-11-10T18:00:00.000Z"
+      },
+      "retentionUntil": "2025-11-17T18:00:00.000Z",
+      "lastAnalysis": {
+        "timestamp": "2025-11-10T18:42:00.000Z",
+        "sentimentScore": 0.8,
+        "sentimentLabel": "positive",
+        "burnoutRisk": "low",
+        "suggestions": [
+          "Celebrate a small win to reinforce the positive momentum.",
+          "Share your energy level with a teammate to keep accountability high."
+        ]
+      }
+    },
+    "demo-fc1ad8d1": {
+      "userId": "demo-fc1ad8d1",
+      "name": "Test User",
+      "timezone": "UTC",
+      "preferences": {},
+      "lastAnalysis": {
+        "timestamp": "2025-11-15T00:08:47.989Z",
+        "sentimentScore": -2.13,
+        "sentimentLabel": "negative",
+        "burnoutRisk": "medium",
+        "suggestions": [
+          "Alternate nostril breathing for 5 minutes",
+          "Establish a consistent bedtime routine"
+        ]
+      },
+      "consent": {
+        "consentGiven": true,
+        "timestamp": "2025-11-14T20:14:53.398Z"
+      },
+      "retentionUntil": null
+    }
+  },
+  "consents": [
+    {
+      "userId": "demo-fc1ad8d1",
+      "consentGiven": true,
+      "timestamp": "2025-11-14T20:14:53.398Z"
+    }
+  ],
+  "analyses": [
+    {
+      "userId": "demo-fc1ad8d1",
+      "text": "I've been working really hard on this hackathon project, feeling a bit overwhelmed with deadlines but excited about the progress.",
+      "timestamp": "2025-11-14T20:22:08.626Z",
+      "metadata": {
+        "mood": 5,
+        "name": "Guest"
+      },
+      "sentimentScore": 5,
+      "sentimentLabel": "positive",
+      "burnoutRisk": "low",
+      "keywordsCount": 1,
+      "suggestions": [
+        "2-hour phone-free evening routine"
+      ]
+    },
+    {
+      "userId": "demo-fc1ad8d1",
+      "text": "This is a test reflection to see how the form works. I'm testing the textarea functionality and checking if it properly updates the character count.",
+      "timestamp": "2025-11-14T22:14:28.291Z",
+      "metadata": {
+        "mood": 7,
+        "name": "Test User"
+      },
+      "sentimentScore": 0,
+      "sentimentLabel": "neutral",
+      "burnoutRisk": "low",
+      "keywordsCount": 0,
+      "suggestions": [
+        "2-hour phone-free evening routine"
+      ]
+    },
+    {
+      "userId": "demo-fc1ad8d1",
+      "text": "I've been feeling stressed lately with work deadlines approaching. Need some time to relax.",
+      "timestamp": "2025-11-15T00:08:50.431Z",
+      "metadata": {
+        "mood": 5,
+        "name": "Test User"
+      },
+      "sentimentScore": -2.13,
+      "sentimentLabel": "negative",
+      "burnoutRisk": "medium",
+      "keywordsCount": 1,
+      "suggestions": [
+        "Alternate nostril breathing for 5 minutes",
+        "Establish a consistent bedtime routine"
+      ],
+      "aiInsights": null,
+      "enhanced": false
+    }
+  ]
+}
